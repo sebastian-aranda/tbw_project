@@ -104,14 +104,15 @@ for name in os.listdir(path):
 		fout.close()
 	if (count == 5093):
 		break
+        
 #Funcion que elimina token con repeticiones menores a x y que no esten en bad_words
-def dict_tokens_modified(data, x):
-    new_dict_tokens = {k: v for k, v in data.iteritems() if ((v >= x) or (k in bad_words))}
-    return new_dict_tokens
-filtered_dict = dict_tokens_modified(mcorpus['token_freq'], 2)
-validated_tokens = list(filtered_dict)
-mcorpus['tokens'] = [token for token in mcorpus['tokens'] if token in validated_tokens]
-mcorpus['token_freq'] = filtered_dict
+#def dict_tokens_modified(data, x):
+#    new_dict_tokens = {k: v for k, v in data.iteritems() if ((v >= x) or (k in bad_words))}
+#    return new_dict_tokens
+#filtered_dict = dict_tokens_modified(mcorpus['token_freq'], 2)
+#validated_tokens = list(filtered_dict)
+#mcorpus['tokens'] = [token for token in mcorpus['tokens'] if token in validated_tokens]
+#mcorpus['token_freq'] = filtered_dict
 
 # Lemmatize all words in comments.
 lemmatizer = WordNetLemmatizer()
@@ -146,10 +147,10 @@ for doc_idx in range(len(corpus)):
         else:
             freq_list.append(freq)
     
-    from random import randint
-    if randint(0, 9) > 8:
-        word_id_list.append(bad_words_ids[0])
-        freq_list.append(5000)
+    #from random import randint
+    #if randint(0, 9) > 8:
+    #    word_id_list.append(bad_words_ids[0])
+    #    freq_list.append(5000)
     
     new_doc = zip(word_id_list,freq_list)
     corpus[doc_idx] = new_doc

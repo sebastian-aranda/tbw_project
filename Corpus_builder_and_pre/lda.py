@@ -22,7 +22,8 @@ lda = ldamodel.LdaModel(corpus, num_topics=2, id2word=dictionary)
 lda.save('tmp/cyberbullying_ldaModel.lda')
 
 #Load LDA Model
-lda = models.LdaModel.load('tmp/cyberbullying_ldaModel.lda')
+#lda = models.LdaModel.load('tmp/cyberbullying_ldaModel.lda')
 
 #Print Topics
+print("Imprimiendo topicos")
 lda.print_topics(2,100)
