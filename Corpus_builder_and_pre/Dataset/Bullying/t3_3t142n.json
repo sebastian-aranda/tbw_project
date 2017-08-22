@@ -1,0 +1,260 @@
+[
+    {
+        "kind": "Listing", 
+        "data": {
+            "modhash": "", 
+            "children": [
+                {
+                    "kind": "t3", 
+                    "data": {
+                        "contest_mode": false, 
+                        "subreddit_name_prefixed": "r/RoastMe", 
+                        "banned_by": null, 
+                        "media_embed": {}, 
+                        "thumbnail_width": 140, 
+                        "subreddit": "RoastMe", 
+                        "selftext_html": null, 
+                        "selftext": "", 
+                        "likes": null, 
+                        "suggested_sort": null, 
+                        "user_reports": [], 
+                        "secure_media": null, 
+                        "link_flair_text": null, 
+                        "id": "3t142n", 
+                        "view_count": null, 
+                        "secure_media_embed": {}, 
+                        "clicked": false, 
+                        "report_reasons": null, 
+                        "author": "Riproast", 
+                        "saved": false, 
+                        "score": 1, 
+                        "approved_by": null, 
+                        "over_18": false, 
+                        "domain": "m.imgur.com", 
+                        "hidden": false, 
+                        "preview": {
+                            "images": [
+                                {
+                                    "source": {
+                                        "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?s=d6d739a7a8a86d36d1e98e945fe69f32", 
+                                        "width": 2448, 
+                                        "height": 3264
+                                    }, 
+                                    "resolutions": [
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=108&amp;s=485e5f05f989d4f46fe639112517b0ce", 
+                                            "width": 108, 
+                                            "height": 144
+                                        }, 
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=216&amp;s=43e2fc85017f6f981940147e0d0982f3", 
+                                            "width": 216, 
+                                            "height": 288
+                                        }, 
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=320&amp;s=842afcd8bd0c1f13f0af595a0bbbec89", 
+                                            "width": 320, 
+                                            "height": 426
+                                        }, 
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=640&amp;s=1c60baeb7d0a1afd5396c16d85ad76dc", 
+                                            "width": 640, 
+                                            "height": 853
+                                        }, 
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=960&amp;s=bc73b0823dc504edd2cbec74685a00a3", 
+                                            "width": 960, 
+                                            "height": 1280
+                                        }, 
+                                        {
+                                            "url": "https://i.redditmedia.com/3C5EbAbrU6sImpxSz7Ca-RViht4M0Yffqi-dImMbk8s.jpg?fit=crop&amp;crop=faces%2Centropy&amp;arh=2&amp;w=1080&amp;s=5710f4b1d45c7669c721f7b377b8a7cb", 
+                                            "width": 1080, 
+                                            "height": 1440
+                                        }
+                                    ], 
+                                    "variants": {}, 
+                                    "id": "buDmKALj9HdIxPCK09JJ4DfO261d5oiJT5colW6d_s4"
+                                }
+                            ], 
+                            "enabled": false
+                        }, 
+                        "num_comments": 3, 
+                        "thumbnail": "https://b.thumbs.redditmedia.com/GpbdRcpumULUl5JBm7EgnomoBUs4brmjvMyAWC7agkE.jpg", 
+                        "subreddit_id": "t5_37xo2", 
+                        "edited": false, 
+                        "link_flair_css_class": null, 
+                        "author_flair_css_class": "roastlink", 
+                        "gilded": 0, 
+                        "downs": 0, 
+                        "brand_safe": true, 
+                        "archived": true, 
+                        "removal_reason": null, 
+                        "post_hint": "link", 
+                        "stickied": false, 
+                        "can_gild": false, 
+                        "thumbnail_height": 140, 
+                        "hide_score": false, 
+                        "spoiler": false, 
+                        "permalink": "/r/RoastMe/comments/3t142n/teach_my_chess_playing_chicano_friend_the_meaning/", 
+                        "subreddit_type": "public", 
+                        "locked": false, 
+                        "name": "t3_3t142n", 
+                        "created": 1447717220.0, 
+                        "url": "http://m.imgur.com/TGFnas6", 
+                        "author_flair_text": "http://redd.it/3t142n", 
+                        "quarantine": false, 
+                        "title": "Teach my chess playing Chicano friend the meaning of roast", 
+                        "created_utc": 1447688420.0, 
+                        "ups": 1, 
+                        "media": null, 
+                        "upvote_ratio": 0.67, 
+                        "mod_reports": [], 
+                        "is_self": false, 
+                        "visited": false, 
+                        "num_reports": null, 
+                        "is_video": false, 
+                        "distinguished": null
+                    }
+                }
+            ], 
+            "after": null, 
+            "before": null
+        }
+    }, 
+    {
+        "kind": "Listing", 
+        "data": {
+            "modhash": "", 
+            "children": [
+                {
+                    "kind": "t1", 
+                    "data": {
+                        "subreddit_id": "t5_37xo2", 
+                        "banned_by": null, 
+                        "removal_reason": null, 
+                        "link_id": "t3_3t142n", 
+                        "likes": null, 
+                        "replies": "", 
+                        "user_reports": [], 
+                        "saved": false, 
+                        "id": "cx25ymu", 
+                        "gilded": 0, 
+                        "archived": true, 
+                        "score": 3, 
+                        "report_reasons": null, 
+                        "author": "[deleted]", 
+                        "parent_id": "t3_3t142n", 
+                        "subreddit_name_prefixed": "r/RoastMe", 
+                        "approved_by": null, 
+                        "controversiality": 0, 
+                        "body": "That is not the first time a guy has taken pictures of him in a locker room.", 
+                        "edited": false, 
+                        "author_flair_css_class": null, 
+                        "downs": 0, 
+                        "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;That is not the first time a guy has taken pictures of him in a locker room.&lt;/p&gt;\n&lt;/div&gt;", 
+                        "stickied": false, 
+                        "can_gild": false, 
+                        "subreddit": "RoastMe", 
+                        "score_hidden": false, 
+                        "subreddit_type": "public", 
+                        "name": "t1_cx25ymu", 
+                        "created": 1447719386.0, 
+                        "author_flair_text": null, 
+                        "created_utc": 1447690586.0, 
+                        "ups": 3, 
+                        "depth": 0, 
+                        "mod_reports": [], 
+                        "num_reports": null, 
+                        "distinguished": null
+                    }
+                }, 
+                {
+                    "kind": "t1", 
+                    "data": {
+                        "subreddit_id": "t5_37xo2", 
+                        "banned_by": null, 
+                        "removal_reason": null, 
+                        "link_id": "t3_3t142n", 
+                        "likes": null, 
+                        "replies": "", 
+                        "user_reports": [], 
+                        "saved": false, 
+                        "id": "cx269su", 
+                        "gilded": 0, 
+                        "archived": true, 
+                        "score": 3, 
+                        "report_reasons": null, 
+                        "author": "its_just_a_cunt_bro", 
+                        "parent_id": "t3_3t142n", 
+                        "subreddit_name_prefixed": "r/RoastMe", 
+                        "approved_by": null, 
+                        "controversiality": 0, 
+                        "body": "Of course you like chess. That's why you imitate the queen. ", 
+                        "edited": false, 
+                        "author_flair_css_class": null, 
+                        "downs": 0, 
+                        "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;Of course you like chess. That&amp;#39;s why you imitate the queen. &lt;/p&gt;\n&lt;/div&gt;", 
+                        "stickied": false, 
+                        "can_gild": true, 
+                        "subreddit": "RoastMe", 
+                        "score_hidden": false, 
+                        "subreddit_type": "public", 
+                        "name": "t1_cx269su", 
+                        "created": 1447719876.0, 
+                        "author_flair_text": null, 
+                        "created_utc": 1447691076.0, 
+                        "ups": 3, 
+                        "depth": 0, 
+                        "mod_reports": [], 
+                        "num_reports": null, 
+                        "distinguished": null
+                    }
+                }, 
+                {
+                    "kind": "t1", 
+                    "data": {
+                        "subreddit_id": "t5_37xo2", 
+                        "banned_by": null, 
+                        "removal_reason": null, 
+                        "link_id": "t3_3t142n", 
+                        "likes": null, 
+                        "replies": "", 
+                        "user_reports": [], 
+                        "saved": false, 
+                        "id": "cx26mrg", 
+                        "gilded": 0, 
+                        "archived": true, 
+                        "score": 1, 
+                        "report_reasons": null, 
+                        "author": "justkiddingsorta", 
+                        "parent_id": "t3_3t142n", 
+                        "subreddit_name_prefixed": "r/RoastMe", 
+                        "approved_by": null, 
+                        "controversiality": 0, 
+                        "body": "Who's your role model? Ugly Betty's gay nephew?", 
+                        "edited": false, 
+                        "author_flair_css_class": null, 
+                        "downs": 0, 
+                        "body_html": "&lt;div class=\"md\"&gt;&lt;p&gt;Who&amp;#39;s your role model? Ugly Betty&amp;#39;s gay nephew?&lt;/p&gt;\n&lt;/div&gt;", 
+                        "stickied": false, 
+                        "can_gild": true, 
+                        "subreddit": "RoastMe", 
+                        "score_hidden": false, 
+                        "subreddit_type": "public", 
+                        "name": "t1_cx26mrg", 
+                        "created": 1447720447.0, 
+                        "author_flair_text": null, 
+                        "created_utc": 1447691647.0, 
+                        "ups": 1, 
+                        "depth": 0, 
+                        "mod_reports": [], 
+                        "num_reports": null, 
+                        "distinguished": null
+                    }
+                }
+            ], 
+            "after": null, 
+            "before": null
+        }
+    }
+]
