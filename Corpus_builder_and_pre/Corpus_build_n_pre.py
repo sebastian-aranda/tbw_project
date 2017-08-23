@@ -12,10 +12,9 @@ from collections import defaultdict
 
 import nltk
 from nltk import BigramCollocationFinder
-from nltk.classify import NaiveBayesClassifier
-from nltk.corpus import subjectivity
-from nltk.sentiment import SentimentAnalyzer
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+# from nltk.corpus import subjectivity
+# from nltk.sentiment import SentimentAnalyzer
+# from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 #Path of the post files in .json format
 path = 'Dataset/'
@@ -41,85 +40,92 @@ mcorpus['comments'] = list()
 mcorpus['tokens'] = list()
 mcorpus['token_freq'] = defaultdict(int)
 i = 0
-for name in os.listdir(path):
-	if name.endswith('.json'):
-		filename='All_comments.txt'
-		fout=open(filename, 'a')
-		try:
-			with open(path+'/'+name) as f:
-				op_json = json.loads(f.read())
-				try:
-					for child in op_json[1]['data']['children']:
-						tokens = []
-						#Extrae el comentario
-						comment_text = child['data']['body'].encode('ascii', 'ignore').replace('\n', ' ')
-						#Elimina los links
-						comment_text = re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', comment_text)
-						for sym in puncts:
-							comment_text = comment_text.replace(sym," ")
-						for num in digits:
-							comment_text = comment_text.replace(num," ")
-						tokens_comment = [word for word in comment_text.lower().split() if word not in stopword_list]
-						tokens = tokens + tokens_comment
-						mcorpus['comments'].append(tokens_comment)
-						for token in tokens_comment:
-							mcorpus['tokens'].append(token)
-							mcorpus['token_freq'][token] += 1
-						if i == 0:
-							nl = ""
-						else:
-							nl = "\n"
-						i += 1
-						fout.write(nl+comment_text)
-						try:
-							for child in child['data']['replies']['data']['children']:
-								tokens = []
-								comment_text = child['data']['body'].encode('ascii', 'ignore').replace('\n', ' ')
-								comment_text = re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', comment_text)
-								for sym in puncts:
-									comment_text = comment_text.replace(sym," ")
-								for num in digits:
-									comment_text = comment_text.replace(num," ")
-								tokens_comment = [word for word in comment_text.lower().split() if word not in stopword_list]
-								tokens = tokens + tokens_comment
-								mcorpus['comments'].append(tokens_comment)
-								for token in tokens_comment:
-									mcorpus['tokens'].append(token)
-									mcorpus['token_freq'][token] += 1
-								i += 1
-								fout.write(nl+comment_text)
-						except Exception:
-							pass
-				except Exception:
-					print('Exception at file:'+str(count)+' has no children')
-					pass
-			with open(path+'/'+name,"wb") as fout2:
-				json.dump(op_json, fout2, indent=4)
-			fout2.close()
-			count += 1
-			pprint(count)
-		except Exception:
-			print('Exception at file:'+str(count))
-			pass
-		fout.close()
-	if (count == 5093):
-		break
-        
-#Funcion que elimina token con repeticiones menores a x y que no esten en bad_words
-#def dict_tokens_modified(data, x):
-#    new_dict_tokens = {k: v for k, v in data.iteritems() if ((v >= x) or (k in bad_words))}
-#    return new_dict_tokens
-#filtered_dict = dict_tokens_modified(mcorpus['token_freq'], 2)
-#validated_tokens = list(filtered_dict)
-#mcorpus['tokens'] = [token for token in mcorpus['tokens'] if token in validated_tokens]
-#mcorpus['token_freq'] = filtered_dict
 
+#Abre las carpetas con post negativos y no-negativos, luego extra los comentarios en 2 archivos, 'Bullying' y 'NoBullying'
+#Para luego ser usados en la clasificacion
+for archive in os.listdir(path):
+    filename=str(archive)+'_comments.txt'
+    fout=open(filename, 'w+')
+    for name in os.listdir(path+str(archive)):
+        if name.endswith('.json'):
+  		try:
+ 			with open(path+str(archive)+'/'+name) as f:
+    				op_json = json.loads(f.read())
+    				try:
+   					for child in op_json[1]['data']['children']:
+  						tokens = []
+  						#Extrae el comentario
+  						comment_text = child['data']['body'].encode('ascii', 'ignore').replace('\n', ' ')
+  						#Elimina los links
+  						comment_text = re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', comment_text)
+  						for sym in puncts:
+ 							comment_text = comment_text.replace(sym," ")
+  						for num in digits:
+ 							comment_text = comment_text.replace(num," ")
+  						tokens_comment = [word for word in comment_text.lower().split() if word not in stopword_list]
+  						tokens = tokens + tokens_comment
+  						mcorpus['comments'].append(tokens_comment)
+  						for token in tokens_comment:
+ 							mcorpus['tokens'].append(token)
+ 							mcorpus['token_freq'][token] += 1
+  						if i == 0:
+ 							nl = ""
+  						else:
+ 							nl = "\n"
+  						i += 1
+  						fout.write(nl+comment_text)
+  						try:
+ 							for child in child['data']['replies']['data']['children']:
+    								tokens = []
+    								comment_text = child['data']['body'].encode('ascii', 'ignore').replace('\n', ' ')
+    								comment_text = re.sub(r'\w+:\/{2}[\d\w-]+(\.[\d\w-]+)*(?:(?:\/[^\s/]*))*', '', comment_text)
+    								for sym in puncts:
+   									comment_text = comment_text.replace(sym," ")
+    								for num in digits:
+   									comment_text = comment_text.replace(num," ")
+    								tokens_comment = [word for word in comment_text.lower().split() if word not in stopword_list]
+    								tokens = tokens + tokens_comment
+    								mcorpus['comments'].append(tokens_comment)
+    								for token in tokens_comment:
+   									mcorpus['tokens'].append(token)
+   									mcorpus['token_freq'][token] += 1
+    								i += 1
+    								fout.write(nl+comment_text)
+  						except Exception:
+ 							pass
+    				except Exception:
+   					print('Exception at file:'+str(count)+' has no children')
+   					pass
+ 			# with open(path+str(archive)+'/'+name,"wb") as fout2:
+                        # json.dump(op_json, fout2, indent=4)
+ 			# fout2.close()
+ 			count += 1
+ 			pprint(count)
+  		except Exception:
+ 			print('Exception at file:'+str(count))
+ 			pass
+        if (count >= 10000):
+            break
+    fout.close()
+    print('Lectura terminada')
+#Funcion que elimina token con repeticiones menores a x y que no esten en bad_words
+def dict_tokens_modified(data, x):
+    new_dict_tokens = {k: v for k, v in data.iteritems() if ((v >= x) or (k in bad_words))}
+    return new_dict_tokens
+print('Filter...')
+filtered_dict = dict_tokens_modified(mcorpus['token_freq'], 2)
+validated_tokens = list(filtered_dict)
+mcorpus['tokens'] = [token for token in mcorpus['tokens'] if token in validated_tokens]
+mcorpus['token_freq'] = filtered_dict
+
+print('Lemmatize...')
 # Lemmatize all words in comments.
 lemmatizer = WordNetLemmatizer()
 comments = [[lemmatizer.lemmatize(token) for token in doc] for doc in mcorpus['comments']]
 
 # Compute bigrams.
 # Add bigrams and trigrams to docs (only ones that appear 20 times or more).
+print('Bigrams...')
 bigram = Phrases(comments, min_count=20)
 for idx in range(len(comments)):
     for token in bigram[comments[idx]]:
@@ -130,6 +136,12 @@ for idx in range(len(comments)):
 #Create and save dictionary
 dictionary = corpora.Dictionary(comments)
 dictionary.save('tmp/cyberbullying_dictionary.dict') #Save the dictionary
+fout = open('All_comments.txt', 'w+')
+comentarios_simplificados = list()
+for comment in comments:
+    comentarios_simplificados = ' '.join(comment)
+    fout.write(comentarios_simplificados+'\n')
+fout.close()
 
 #Increasing weight of bad words:
 bad_words_ids = [word_id for word_id, word in dictionary.iteritems() if word in bad_words]
@@ -147,10 +159,10 @@ for doc_idx in range(len(corpus)):
         else:
             freq_list.append(freq)
     
-    #from random import randint
-    #if randint(0, 9) > 8:
-    #    word_id_list.append(bad_words_ids[0])
-    #    freq_list.append(5000)
+    from random import randint
+    if randint(0, 9) > 8:
+        word_id_list.append(bad_words_ids[0])
+        freq_list.append(5000)
     
     new_doc = zip(word_id_list,freq_list)
     corpus[doc_idx] = new_doc
@@ -174,7 +186,6 @@ for bigram in bigrams:
 print('\n')
 
 corpora.BleiCorpus.serialize('tmp/cyberbullying_corpus.lda-c', corpus) #Save the corpus
-
 
 #Pendiente
 # #Entrena el sentiment_analyzer para ser usado en el corpus de resenias
